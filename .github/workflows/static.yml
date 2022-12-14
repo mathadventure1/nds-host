@@ -26,7 +26,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: selfhosted
+    runs-on: NailsLaptop
     steps:
       #- name: Freeing up more disk space
         #run: |
