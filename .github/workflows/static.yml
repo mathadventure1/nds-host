@@ -37,6 +37,9 @@ jobs:
           #sudo apt clean
           #docker rmi $(docker image ls -aq)
           #df -h
+      - name: Permission Fix
+        run: |
+          git config --global --add safe.directory D:/actions-runner/_work/nds-host/nds-host
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
