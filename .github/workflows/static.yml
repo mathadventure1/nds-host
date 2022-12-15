@@ -40,6 +40,10 @@ jobs:
       - name: Permission Fix
         run: |
           git config --global --add safe.directory D:/actions-runner/_work/nds-host/nds-host
+      - name: Change Shell to Bash
+        run: |
+          # Make sure we get the bash that comes with git, not WSL bash
+          - ps: $env:Path = "C:\Program Files\Git\bin;$env:Path"
       #- name: Checkout #already cloned!!! *DO NOT REMOVE WITHOUT HEADS UP!!!!!!*
         #uses: actions/checkout@v3
       - name: Setup Pages
