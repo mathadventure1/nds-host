@@ -40,8 +40,8 @@ jobs:
       - name: Permission Fix
         run: |
           git config --global --add safe.directory D:/actions-runner/_work/nds-host/nds-host
-      - name: Checkout
-        uses: actions/checkout@v3
+      #- name: Checkout #already cloned!!! *DO NOT REMOVE WITHOUT HEADS UP!!!!!!*
+        #uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
