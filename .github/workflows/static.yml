@@ -28,27 +28,27 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: self-hosted
     steps:
-      #- name: Freeing up more disk space
-        #run: |
-          #sudo rm -rf /usr/local/lib/android # will release about 10 GB if you don't need Android
-          #sudo rm -rf /usr/share/dotnet # will release about 20GB if you don't need .NET
-          #sudo swapoff -a
-          #sudo rm -f /swapfile
-          #sudo apt clean
-          #docker rmi $(docker image ls -aq)
-          #df -h
+      - name: Freeing up more disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android # will release about 10 GB if you don't need Android
+          sudo rm -rf /usr/share/dotnet # will release about 20GB if you don't need .NET
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h
       - name: Permission Fix
         run: |
           git config --global --add safe.directory D:/actions-runner/_work/nds-host/nds-host
-      #- name: Checkout #already cloned!!! *DO NOT REMOVE WITHOUT HEADS UP!!!!!!*
-        #uses: actions/checkout@v3
+      - name: Checkout #already cloned!!! *DO NOT REMOVE WITHOUT HEADS UP!!!!!!*
+        uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
-      #- name: Upload artifact 
-        #uses: actions/upload-pages-artifact@v1
-        #with:
-          ## Upload entire repository
-          #path: '.'
+      - name: Upload artifact 
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
