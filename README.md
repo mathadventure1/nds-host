@@ -9,7 +9,7 @@
 This is a repository that is a backup of all of the NDS Roms on the main GBA project. This currently includes: Nintendo DS games (crazy right?). 
 
 # Creating a Fork!
-Unless you have extensive knowledge of self hosting runners, you probably don't wannat
+Unless you have extensive knowledge of self hosting runners, you probably don't wanna try and use this repo for deploying
 ## Once Deployed!
 Once deployed, make sure the site is live by visiting index.html. In this case, our link is https://cattn.github.io/nds-host/index.html, but replace `cattn` with your username, and `nds-host` with the repo name, if changed. 
 
